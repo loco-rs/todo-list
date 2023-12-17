@@ -44,7 +44,7 @@ function TodoList() {
   const queryClient = useQueryClient();
 
   const fetchTodos = async () => {
-    const { data } = await axios.get(`http://127.0.0.1:3000/api/notes`)
+    const { data } = await axios.get(`api/notes`)
     return data;
   }
 
@@ -53,7 +53,7 @@ function TodoList() {
 
   const remove = async (id) => {
     try {
-      const response = await axios.delete(`http://127.0.0.1:3000/api/notes/${id}`);
+      const response = await axios.delete(`api/notes/${id}`);
       return response.data;
     } catch (error) {
       console.error('Error posting todo:', error);
@@ -110,7 +110,7 @@ function AddTodo() {
 
   const add = async (newTodo) => {
     try {
-      const response = await axios.post(`http://127.0.0.1:3000/api/notes`, {
+      const response = await axios.post(`api/notes`, {
         title: newTodo,
         content: newTodo,
       });

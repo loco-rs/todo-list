@@ -482,6 +482,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "backtrace_printer"
+version = "1.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e8d28de81c708c843640982b66573df0f0168d87e42854b563971f326745aab7"
+dependencies = [
+ "btparse-stable",
+ "colored",
+ "regex",
+ "thiserror",
+]
+
+[[package]]
 name = "base64"
 version = "0.21.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -611,6 +623,12 @@ dependencies = [
  "memchr",
  "serde",
 ]
+
+[[package]]
+name = "btparse-stable"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0d75b8252ed252f881d1dc4482ae3c3854df6ee8183c1906bac50ff358f4f89f"
 
 [[package]]
 name = "bumpalo"
@@ -1992,57 +2010,15 @@ dependencies = [
 
 [[package]]
 name = "loco-rs"
-version = "0.1.6"
+version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1319cf3f677fb3020540b60c9fdf077ec457769f9bf014141b520ac800e8c756"
-dependencies = [
- "argon2",
- "async-trait",
- "axum",
- "bb8",
- "byte-unit",
- "cargo_metadata",
- "cfg-if",
- "chrono",
- "clap",
- "colored",
- "duct",
- "eyre",
- "fs-err",
- "include_dir",
- "jsonwebtoken",
- "lazy_static",
- "lettre",
- "rand",
- "regex",
- "requestty",
- "rrgen",
- "rusty-sidekiq",
- "sea-orm",
- "sea-orm-migration",
- "serde",
- "serde_json",
- "serde_variant",
- "serde_yaml",
- "tera",
- "thiserror",
- "tokio",
- "tower-http",
- "tracing",
- "tracing-subscriber",
- "uuid",
- "validator",
-]
-
-[[package]]
-name = "loco-rs"
-version = "0.1.6"
-source = "git+https://github.com/loco-rs/loco#bd75a00117d931a7bfa4951766f75a513d72e4c7"
+checksum = "af486e72ce8e7f6a8ae87bab477131db2b1b819f7f76ff4583f69207cc783f48"
 dependencies = [
  "argon2",
  "async-trait",
  "axum",
  "axum-test",
+ "backtrace_printer",
  "bb8",
  "byte-unit",
  "cargo_metadata",
@@ -2138,7 +2114,7 @@ name = "migration"
 version = "0.1.0"
 dependencies = [
  "async-std",
- "loco-rs 0.1.6 (registry+https://github.com/rust-lang/crates.io-index)",
+ "loco-rs",
  "sea-orm-migration",
 ]
 
@@ -4132,7 +4108,7 @@ dependencies = [
  "eyre",
  "include_dir",
  "insta",
- "loco-rs 0.1.6 (git+https://github.com/loco-rs/loco)",
+ "loco-rs",
  "migration",
  "rstest",
  "sea-orm",

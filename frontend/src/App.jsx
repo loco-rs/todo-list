@@ -30,7 +30,7 @@ function Layout() {
     <div>
       <div>
         <a href="https://loco.rs" target="_blank" rel="noreferrer">
-          <img src="https://raw.githubusercontent.com/loco-rs/todo-list-example/4b8ade3ddfb5a2e076e5188cdc8f6cd404f3fdd1/frontend/src/assets/loco.svg?token=AAJK5RNAWFKADM2GOPW6FK3FPNPWQ" className="logo" alt="Loco logo" />
+          <img src="https://raw.githubusercontent.com/loco-rs/todo-list-example/4b8ade3ddfb5a2e076e5188cdc8f6cd404f3fdd1/frontend/src/assets/loco.svg" className="logo" alt="Loco logo" />
         </a>
       </div>
       <hr />
